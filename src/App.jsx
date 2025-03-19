@@ -69,6 +69,9 @@ const resetCounters=()=>{
 <button className='button AddPrompt' onClick={openPromptRowsToAdd}>Add</button>
 
   </div>
+
+  {/* stitches */}
+  
   <div className='stitches'>
   <h2>stitches</h2>
 <div className='count'>
