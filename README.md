@@ -1,12 +1,36 @@
-# React + Vite
+# Crochet Counter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple application designed to help crocheters keep track of their stitches and rows in crochet projects.
 
-Currently, two official plugins are available:
+## Features
+- **Stitch Counting**: Easily increment or decrement stitch counts for accurate tracking.
+- **Row Tracking**: Keep track of the number of rows completed in your project.
+- **User-Friendly Interface**: Clean and simple design for ease of use during crafting.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Nemo97-76/crochetCounter.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd crochetCounter
+   ```
+3. Install dependencies (if applicable, e.g., for a web or mobile app):
+   ```bash
+   npm install  # or yarn install, depending on the tech stack
+   ```
+4. Run the application:
+   ```bash
+   npm start  # or yarn start
+   ```
 
-## Expanding the ESLint configuration
+## Usage
+1. Launch the application.
+2. Use buttons to increment or decrement stitch/rows counts.
+3. Track rows by moving to the next row when complete.
+4. Save your progress to resume later.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Contact
+- **Email**:tasneemyoussef61@mail.com
+- **Linkedin**:https://www.linkedin.com/in/tasneem-youssef-770708278/
