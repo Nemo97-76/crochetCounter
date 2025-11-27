@@ -59,7 +59,7 @@ const resetCounters=()=>{
     <div className="App">
 <div className='container'>
   <div className='rows'>
-<h2>rows</h2>
+<h2>rows done</h2>
 <div className='count'>
   {rows}
 </div>
