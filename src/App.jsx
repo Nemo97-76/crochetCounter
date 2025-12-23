@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<Counter/>}/>
-      <Route path="/lengthLeftCalculator" element={<LengthLeftCalculator/>}/>
+    /*  <Route path="/lengthLeftCalculator" element={<LengthLeftCalculator/>}/>*/
     </Routes>
     </BrowserRouter>
 </>
