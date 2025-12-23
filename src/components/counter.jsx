@@ -1,8 +1,6 @@
 import {useEffect,useState} from 'react';
-import { useNavigate } from 'react-router-dom';
 import "../App.css"
 const Counter=()=>{
-const nav=useNavigate();
 //local storage
 useEffect(() => {
   const SavedRows=localStorage.getItem('rows');
@@ -88,9 +86,6 @@ const resetCounters=()=>{
 </div>
 <button className='reset' onClick={resetCounters}>reset</button>
 
-
-     <button className='changeBTN'
-    onClick={nav('/lengthLeftCalculator')}>change calculator</button>
 </div>
      
     </>
