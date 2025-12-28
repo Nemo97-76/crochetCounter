@@ -1,7 +1,11 @@
 import {useEffect,useState} from 'react';
-import "../App.css"
+import { useNavigate } from 'react-router-dom';
+import "./counter.css"
+import { Button, Tooltip } from '@mui/joy';
+import ChangeCircleOutlinedIcon from '@mui/icons-material/ChangeCircleOutlined';
 const Counter=()=>{
 //local storage
+const navigate = useNavigate();
 useEffect(() => {
   const SavedRows=localStorage.getItem('rows');
   const SavedStitches=localStorage.getItem('stitches');
@@ -55,18 +59,18 @@ const resetCounters=()=>{
 }
   return (
     <>
-    <div className="App">
-        <h1>Counter</h1>
-<div className='container'>
+    <div className="Counter">
+        <h1 className="counter-title">Counter</h1>
+<div className='counter-container'>
   <div className='rows'>
 <h2>rows done</h2>
 <div className='count'>
   {rows}
 </div>
 
-<button className='button' onClick={()=>setRows(rows+1)}>increase one</button>
-<button className='button prompt' onClick={openPromptRows}>set number</button>
-<button className='button AddPrompt' onClick={openPromptRowsToAdd}>Add</button>
+<button className='buttonCounter' onClick={()=>setRows(rows+1)}>increase one</button>
+<button className='buttonCounter prompt' onClick={openPromptRows}>set number</button>
+<button className='buttonCounter AddPrompt' onClick={openPromptRowsToAdd}>Add</button>
 
   </div>
 
@@ -79,16 +83,19 @@ const resetCounters=()=>{
 </div>
 
 
-<button className='button' onClick={()=>setStitches(stitches+1)}>increase one</button>
-<button className='button prompt' onClick={openPromptStitches}>set number</button>
-<button className='button AddPrompt' onClick={openPromptStitchesToAdd}>Add</button>
+<button className='buttonCounter' onClick={()=>setStitches(stitches+1)}>increase one</button>
+<button className='buttonCounter prompt' onClick={openPromptStitches}>set number</button>
+<button className='buttonCounter AddPrompt' onClick={openPromptStitchesToAdd}>Add</button>
   </div>
 </div>
-<button className='reset' onClick={resetCounters}>reset</button>
-
+<button className='resetCount' onClick={resetCounters}>reset</button>
+<Tooltip title="Change Calculator" placement="bottom" arrow={true} className="changeTooltip">
+ <Button className='changeBTN' onClick={() => navigate('/lengthLeftCalculator')}><ChangeCircleOutlinedIcon sx={{fontSize:"45px"}}/></Button>
+</Tooltip>
 </div>
      
     </>
   )
 }
+
 export default Counter;
