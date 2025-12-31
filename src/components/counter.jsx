@@ -52,11 +52,7 @@ const openPromptRows=()=>{
   }
 }
 
-//reset
-const resetCounters=()=>{
-  setRows(0);
-  setStitches(0);
-}
+
   return (
     <>
     <div className="Counter">
@@ -71,6 +67,7 @@ const resetCounters=()=>{
 <button className='buttonCounter' onClick={()=>setRows(rows+1)}>increase one</button>
 <button className='buttonCounter prompt' onClick={openPromptRows}>set number</button>
 <button className='buttonCounter AddPrompt' onClick={openPromptRowsToAdd}>Add</button>
+<button className='reset resetrows' onClick={()=>setRows(0)}>reset</button>
 
   </div>
 
@@ -86,9 +83,12 @@ const resetCounters=()=>{
 <button className='buttonCounter' onClick={()=>setStitches(stitches+1)}>increase one</button>
 <button className='buttonCounter prompt' onClick={openPromptStitches}>set number</button>
 <button className='buttonCounter AddPrompt' onClick={openPromptStitchesToAdd}>Add</button>
+
+
+<button className='reset resetst' onClick={()=>setStitches(0)}>reset</button>
+
   </div>
 </div>
-<button className='resetCount' onClick={resetCounters}>reset</button>
 <Tooltip title="Change Calculator" placement="bottom" arrow={true} className="changeTooltip">
  <Button className='changeBTN' onClick={() => navigate('/lengthLeftCalculator')}><ChangeCircleOutlinedIcon sx={{fontSize:"45px"}}/></Button>
 </Tooltip>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, Input,  Tooltip } from '@mui/joy';
 import ChangeCircleOutlinedIcon from '@mui/icons-material/ChangeCircleOutlined';
@@ -7,24 +7,22 @@ import StraightenSharpIcon from '@mui/icons-material/StraightenSharp';
 
 const LengthLeftCalculator=()=>{
 const navigate = useNavigate();
-const [lengthLeft,setLengthLeft]=React.useState(0);
+const [fullLength, setFullLength]=useState(0);
+const [fullWeight, setFullWeight]=useState(0);
+const [weightRemaining, setWeightRemaining]=useState(0);
+const [lengthLeft, setLengthLeft]=useState(0);
 
-/*const [fulllength,setFullLength]=React.useState(0);
-const [fullweight,setFullWeight]=React.useState(0);
-const [weightremaining,setWeightRemaining]=React.useState(0);
-const handleSubmit=()=>{
-let theResult
-theResult=(weightremaining/fullweight)*fulllength
-setLengthLeft(theResult);
+const calculate=()=>{
+    const lengthLeft = (fullLength * weightRemaining) / fullWeight;
+    setLengthLeft(lengthLeft);
 }
-const resetCounters=()=>{
-  setFullLength(0);
+
+const reset=()=>{
+    setFullLength(0);
     setFullWeight(0);
-        setWeightRemaining(0);
-  setLengthLeft(0);
-} */
-
-
+    setWeightRemaining(0);
+    setLengthLeft(0);
+}
 
 return(
 <div className='lengthLeftCalculator'>
@@ -40,7 +38,7 @@ Length Left Calculator
         input:{
             min:0,
         }
-    }} type="number" onChange={()=>setFullLength(Number(event.target.value))} placeholder='e.g. 200'/>
+    }} type="number" value={fullLength?fullLength:""} onChange={()=>setFullLength(Number(event.target.value))} placeholder='e.g. 200'/>
     </div>
 <div>
 <label>
@@ -52,7 +50,7 @@ Length Left Calculator
             min:0,
             max:100,
         }
-    }} type="number" onChange={()=>setFullWeight(Number(event.target.value))} placeholder='e.g. 100'/>
+    }} type="number" value={fullWeight?fullWeight:""} onChange={()=>setFullWeight(Number(event.target.value))} placeholder='e.g. 100'/>
 </div>
 
 <div>
@@ -66,14 +64,16 @@ Length Left Calculator
             max:100,
         }
     }}
-    type="number" onChange={()=>setWeightRemaining(Number(event.target.value))} placeholder='e.g. 40'/>
+    type="number" value={
+        weightRemaining?weightRemaining:''
+    } onChange={()=>setWeightRemaining(Number(event.target.value))} placeholder='e.g. 40'/>
     </div>   
-    <Button className='calculate' endDecorator={<StraightenSharpIcon sx={{fontSize:"24px"}}/>}> 
+    <Button className='calculate' endDecorator={<StraightenSharpIcon sx={{fontSize:"24px"}}/>} onClick={calculate}> 
       Calculate{" "} 
     </Button>
-    <Button className='resetCalculater calculate'>reset</Button>
+    <Button onClick={reset} className='resetCalculater calculate'>reset</Button>
     <div className='resultSection'>
-    {lengthLeft}
+    the remaining length is : {lengthLeft} meters
 </div>
 
 

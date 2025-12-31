@@ -1,4 +1,8 @@
-
+*{
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+}
 body {
   background-color: #dcd6f7;
 }
@@ -74,7 +78,7 @@ body {
   margin-left: 50%;
   transform: translateX(-50%);
 }
-.resetCount {
+.reset {
   background-color: #4e4c67;
   width: 100px;
   height: 30px;
@@ -87,10 +91,9 @@ body {
   cursor: pointer;
   text-align: center;
   border: none;
-  position: absolute;
-    top: 80vh;
-    left: 50%;
-    transform: translate(-50%);
+margin-top: 35px;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 .changeTooltip{
   background-color: #674c65 !important;
