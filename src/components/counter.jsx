@@ -4,6 +4,8 @@ import "./counter.css"
 import { Button, Tooltip } from '@mui/joy';
 import ChangeCircleOutlinedIcon from '@mui/icons-material/ChangeCircleOutlined';
 const Counter=()=>{
+  const width=window.innerWidth;
+  
 //local storage
 const navigate = useNavigate();
 useEffect(() => {
@@ -58,7 +60,7 @@ const openPromptRows=()=>{
     <div className="Counter">
         <h1 className="counter-title">Counter</h1>
 <div className='counter-container'>
-  <div className='rows'>
+  <div className={width>600?"leftCounter rows":" rows"}>
 <h2>rows done</h2>
 <div className='count'>
   {rows}

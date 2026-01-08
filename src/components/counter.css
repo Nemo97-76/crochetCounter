@@ -4,38 +4,37 @@
   text-transform: capitalize;
 }
 body {
-  background-color: #dcd6f7;
+  background-color: #FEFAE0 !important;
 }
 .counter-title{
     text-align: center;
-    margin-top: 200px;
+    margin-top: 150px;
     font-size: 50px;
     font-family: "Solitreo", cursive;
     font-weight: 400;
     font-style: normal;
-    color: #4e4c67;
+    color: #283618;
 }
 .counter-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #985f6f;
+  margin: auto;
+  min-width: fit-content;
+  width: fit-content;
+  background-color: #606C38;
   border-radius: 10px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
+  display: flex;
+  flex-wrap: wrap;
+
 }
 .rows h2,.stitches h2 {
   text-transform: capitalize;
-  color: #f5f5dc;
+  color: #FEFAE0;
   text-align: center;
   font-size: 35px;
   font-family: "Solitreo", cursive;
   font-weight: 400;
   font-style: normal;
 }
-.rows {
+.leftCounter {
   border-right: #f5f5dc 3px solid;
 }
 .stitches,
@@ -52,24 +51,24 @@ body {
   width: 5vw;
   height: 5vh;
   border-radius: 10px;
-  background-color: #a6b1e1;
+  background-color: #BC6C25;
   margin: auto;
-  color: #f5f5dc;
+  color: white;
   text-align: center;
   font-size: 25px;
   font-family: "Solitreo", cursive;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   line-height: 55px;
 }
 .buttonCounter {
   width: fit-content;
   border: none;
-  background-color: #b4869f;
-  color: #f5f5dc;
-  font-size: 27px;
+  background-color: #DDA15E;
+  color: white;
+  font-size: 29px;
   font-family: "Solitreo", cursive;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   padding: 10px;
   border-radius: 10px;
@@ -79,7 +78,7 @@ body {
   transform: translateX(-50%);
 }
 .reset {
-  background-color: #4e4c67;
+  background-color: #283618;
   width: 100px;
   height: 30px;
   font-size: 27px;
@@ -99,11 +98,24 @@ margin-top: 35px;
   background-color: #674c65 !important;
 }
 .changeBTN{
-  background-color: #b4869f !important;
+  background-color: #283618 !important;
 border-radius: 50% !important; 
 width: 60px;
 height: 60px;
-position: absolute !important;
-top: 150px;
-left: 70px;
+position: fixed !important;
+top: 5vh;
+left: 10px;
+}
+@media (max-width: 600px) {
+  .counter-container {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  .stitches,
+  .rows {
+    width: 80vw;
+    border-right: none !important;
+    border-bottom: #f5f5dc 3px solid;
+  }
 }

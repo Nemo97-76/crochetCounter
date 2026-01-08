@@ -2,14 +2,12 @@
     margin: 0;
     padding: 0;
 }
-body{
-background-color: #f5d7b5 !important;
-}
+
 :root{
-    --body:#091d26;
-    --container:#d84f2a;
-    --text:#ede6df;
-    --button:#d6c4b0;
+    --shiftbutton:#472D30;
+    --container:#e26d5c;
+    --button:#723D46;
+    --body:#FFE1A8;
 }
 h1{
     text-align: center;
@@ -19,13 +17,9 @@ h1{
     font-family: "Solitreo", cursive;
     font-weight: 400;
     font-style: normal;
-    color: var(--body);
+    color: var(--shiftbutton);
 }
 .container {
-/*   position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   margin: auto;
   background-color: var(--container);
   border-radius: 10px;
@@ -57,12 +51,12 @@ margin: auto;
 }
 .calculate{
     transform: translateY(10px) !important;
-    background-color: var(--body) !important;
+    background-color: var(--button) !important;
  font-family: "Solitreo", cursive !important;
     font-weight: 400 !important;
     font-style: normal !important;
     font-size: 24px !important;
-    color: var(--text) !important;
+    color: white !important;
 
 }
 .resultSection{
@@ -73,13 +67,16 @@ margin: auto;
     font-size: 24px !important;
 }
 .changeBTN2{
-    background-color: var(--body) !important;
+    background-color: var(--shiftbutton) !important;
     border-radius: 50% !important; 
 width: 60px;
 height: 60px;
-position: absolute !important;
-top: 150px;
-left: 70px;
-
-
+position: fixed !important;
+top: 5vh;
+left: 10px;
+}
+@media (max-width:600px) {
+    .container{
+        width: 250px;
+    }
 }
