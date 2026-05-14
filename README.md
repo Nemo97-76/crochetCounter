@@ -1,7 +1,11 @@
 # Crochet Counter
 
 A simple application designed to help crocheters keep track of their stitches and rows in crochet projects.
-
+<a href="https://crochet-count-helper.netlify.app/" target="_blank">
+<P align="center">
+<img src="./src/photos/WhatsApp Image 2026-05-14 at 11.30.37 PM.jpeg"/>
+</p>
+</a>
 ## Features
 - **Stitch Counting**: Easily increment or decrement stitch counts for accurate tracking.
 - **Row Tracking**: Keep track of the number of rows completed in your project.
@@ -32,7 +36,7 @@ A simple application designed to help crocheters keep track of their stitches an
 4. Save your progress to resume later.
 
 ## Demo
-click <a href="https://crochet-count-helper.netlify.app/">here</a> for demo
+click <a href="https://crochet-count-helper.netlify.app/" target="_blank">here</a> for demo
 
 ## Contact
 - **Email**:tasneemyoussef61@mail.com
